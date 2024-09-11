@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Royal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 400px;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        .result {
+            margin-top: 20px;
+        }
+        .result div {
+            margin: 5px 0;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto 20px;
+            width: 128px;
+            height: 128px;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/97/50/66/9750662d-aaaf-37b5-4626-907b8bcb752c/source/256x256bb.jpg" alt="Logo Royal" class="logo">
+    
+    <h2>Calculadora Royal</h2>
+   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda Dinámica con Total</title>
+    <style>
+        .input-container {
+            margin-bottom: 10px;
+        }
+        #total {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="input-container">
+            <label for="search1">Busca una opción:</label>
+            <input type="text" id="search1" name="search" list="options-list1" oninput="updateTotal()">
+            <datalist id="options-list1">
+                <!-- Opciones aquí -->
+                <option value="15 pcs. - 4.180.000" data-value="4180000"></option>
+                <option value="10 pcs. - 3.080.000" data-value="3080000"></option>
+                <option value="8 pcs. - 2.460.000" data-value="2460000"></option>
+                <option value="7 pcs. - 1.800.000" data-value="1800000"></option>
+                <option value="5 pcs. Complementario - 1.500.000" data-value="1500000"></option>
+                <option value="5 pcs. esencial - 1.340.000" data-value="1340000"></option>
+                <option value="Olla de 30lts. con tapa - 1.250.000"
+data-value="1250000></option>
+<option value="Olla de 20lts. con tapa - 1.000.000" data-value="1000000"></option>
+<option value="Olla 12lts. con tapa - 895.000" data-value="895000"></option>
+<option value="Olla 8lts. con tapa - 765.000" data-value="765000"></option>
+<option value="Olla 6lts. con tapa - 730.000" data-value="730000"></option>
+<option value="Olla 4lts. con tapa - 580.000" data-value="580000"></option>
+<option value="Olla 3lts. con tapa - 520.000" data-value="520000"></option>
+<option value="Olla 2lts. con tapa - 478.000" data-value="478000"></option>
+<option value="Olla de 1.5 Qts. con tapa - 435.000" data-value="435000"></option>
+<option value="Olla de presión c/reloj 6 litros - 935.000" data-value="935000"></option>
+<option value="Olla de presión c/reloj 10 litros - 1.130.000" data-value="1130000"></option>
+<option value="Pavera Ovalada Royal Prestige - 1.000.000" data-value="1000000"></option>
+<option value="Paellera de 14” - 830.000" data-value="830000"></option>
+<option value="Paellera de 10” RP - 560.000" data-value="560000"></option>
+<option value="Sartén de 26cm c.tapa - 690.000" data-value="690000"></option>
+<option value="Sartén de 20cm c.tapa - 515.000" data-value="515000"></option>
+<option value="Juego de Sartenes Gourmet 4 pza - 980.000" data-value="980000"></option>
+<option value="Sartén Gourmet de 10” c.tapa - 550.000" data-value="550000"></option>
+<option value="Sartén Gourmet de 8” c.tapa - 477.000" data-value="477000"></option>
+<option value="Juego Easy Release 6 piezas - 2.190.000" data-value="2190000"></option>
+<option value="Sartén Easy Release 10” c.tapa - 720.000" data-value="720000"></option>
+<option value="Sartén Easy Release 12” c.tapa - 926.000" data-value="926000"></option>
+<option value="Maxtractor - 1.860.000" data-value="1860000"></option>
+<option value="Tapa Pequeña 16cm - 140.000" data-value="140000"></option>
+<option value="Tapa Mediana 20cm. - 160.000" data-value="160000"></option>
+<option value="Tapa Grande 26cm. - 207.000" data-value="207000"></option>
+<option value="Tapa Alta 26cm. - 480.000" data-value="480000"></option>
+<option value="Colador Pequeño 20cm. - 345.000" data-value="345000"></option>
+<option value="Colador Grande 26cm. - 440.000" data-value="440000"></option>
+<option value="Plancha Doble RP - 570.000" data-value="570000"></option>
+<option value="Parrilla Redonda RP - 480.000" data-value="480000"></option>
+<option value="Plancha Sencilla RP - 440.000" data-value="440000"></option>
+<option value="Destapador Precision Series - 52.000" data-value="52000"></option>
+<option value="Rallador Precision Series - 55.000" data-value="55000"></option>
+<option value="Batidor de Globo Precisión Series - 66.000" data-value="66000"></option>
+<option value="Cortapizza Precisión Series - 61.000" data-value="61000"></option>
+<option value="Pelador - 51.000" data-value="51000"></option>
+<option value="Base Magnética - 55.000" data-value="55000"></option>
+<option value="Espátula Precisión Series - 60.000" data-value="60000"></option>
+<option value="Nvo Juego p/servir DELUXE - 46.000" data-value="46000"></option>
+<option value="Nvo Juego p/servir COMPLEMENTARIO - 42.000" data-value="42000"></option>
+<option value="JUEGO Cubiertos American 24 Pza - 165.000" data-value="165000"></option>
+<option value="Chocolatera RP - 450.000" data-value="450000"></option>
+<option value="Expertea - 695.000" data-value="695000"></option>
+<option value="Hervidor 900 ml. - 175.000" data-value="175000"></option>
+<option value="Hervidor 450 ml. - 147.000" data-value="147000"></option>
+<option value="Tazones 4 - 260.000" data-value="260000"></option>
+<option value="Tazones 2 - 128.000" data-value="128000"></option>
+<option value="Coladores Maxtractor - 389.000" data-value="389000"></option>
+<option value="Cafetera Expresso 10 tazas - 340.000" data-value="340000"></option>
+<option value="Cafetera Expresso 4 tazas - 210.000" data-value="210000"></option>
+<option value="Cartucho (Financiado) - 500.000" data-value="500000"></option>
+<option value="Cartucho (De contado) - 300.000" data-value="300000"></option>
+<option value="Cacerola para huevos - 590.000" data-value="590000"></option>
+<option value="RP ALL-IN-ONE BLOQUE COMPLETO - 1.430.000" data-value="1430000"></option>
+<option value="Juego de cuchillo para carne 4pza. - 235.000" data-value="235000"></option>
+<option value="Juego de cuchillos 5 piezas - 530.000" data-value="530000"></option>
+<option value="RP Tenedor para trinchar 6 Pulgadas - 195.000" data-value="195000"></option>
+<option value="RP Cuchillo para trinchar - 190.000" data-value="190000"></option>
+<option value="Afilador (Chaira) - 82.000" data-value="82000"></option>
+<option value="Tijeras Precisión - 180.000" data-value="180000"></option>
+<option value="Cuchillo Santoku 5 Pulgadas - 45.000" data-value="45000"></option>
+<option value="RP Hacha - 190.000" data-value="190000"></option>
+<option value="RP Cuchillo multiuso 5 Pulgadas - 180.000" data-value="180000"></option>
+<option value="RP Cuchillo para pelar 2.75 Pulgadas - 160.000" data-value="160000"></option>
+<option value="Tabla de bambú grande - 100.000" data-value="100000"></option>
+<option value="Tabla de bambú pequeña - 79.000" data-value="79000"></option>
+                <!-- Más opciones aquí -->
+            </datalist>
+            <button onclick="addSearch()">+</button>
+        </div>
+    </div>
+    
+    <div id="total">
+        <label for="totalValue">Total:</label>
+        <input type="number" id="totalValue" name="totalValue" readonly>
+    </div>
+
+    <script>
+        const options = [
+    { text: "15 pcs. - 4.180.000", value: 4180000 },
+    { text: "10 pcs. - 3.080.000", value: 3080000 },
+    { text: "8 pcs. - 2.460.000", value: 2460000 },
+    { text: "7 pcs. - 1.800.000", value: 1800000 },
+    { text: "5 pcs. Complementario - 1.500.000", value: 1500000 },
+    { text: "5 pcs. esencial - 1.340.000", value: 1340000 },
+    { text: "Olla de 30lts. con tapa - 1.250.000", value: 1250000 },
+    { text: "Olla de 20lts. con tapa - 1.000.000", value: 1000000 },
+    { text: "Olla 12lts. con tapa - 895.000", value: 895000 },
+    { text: "Olla 8lts. con tapa - 765.000", value: 765000 },
+    { text: "Olla 6lts. con tapa - 730.000", value: 730000 },
+    { text: "Olla 4lts. con tapa - 580.000", value: 580000 },
+    { text: "Olla 3lts. con tapa - 520.000", value: 520000 },
+    { text: "Olla 2lts. con tapa - 478.000", value: 478000 },
+    { text: "Olla de 1.5 Qts. con tapa - 435.000", value: 435000 },
+    { text: "Olla de presión c/reloj 6 litros - 935.000", value: 935000 },
+    { text: "Olla de presión c/reloj 10 litros - 1.130.000", value: 1130000 },
+    { text: "Pavera Ovalada Royal Prestige - 1.000.000", value: 1000000 },
+    { text: "Paellera de 14” - 830.000", value: 830000 },
+    { text: "Paellera de 10” RP - 560.000", value: 560000 },
+    { text: "Sartén de 26cm c.tapa - 690.000", value: 690000 },
+    { text: "Sartén de 20cm c.tapa - 515.000", value: 515000 },
+    { text: "Juego de Sartenes Gourmet 4 pza - 980.000", value: 980000 },
+    { text: "Sartén Gourmet de 10” c.tapa - 550.000", value: 550000 },
+    { text: "Sartén Gourmet de 8” c.tapa - 477.000", value: 477000 },
+    { text: "Juego Easy Release 6 piezas - 2.190.000", value: 2190000 },
+    { text: "Sartén Easy Release 10” c.tapa - 720.000", value: 720000 },
+    { text: "Sartén Easy Release 12” c.tapa - 926.000", value: 926000 },
+    { text: "Maxtractor - 1.860.000", value: 1860000 },
+    { text: "Tapa Pequeña 16cm - 140.000", value: 140000 },
+    { text: "Tapa Mediana 20cm. - 160.000", value: 160000 },
+    { text: "Tapa Grande 26cm. - 207.000", value: 207000 },
+    { text: "Tapa Alta 26cm. - 480.000", value: 480000 },
+    { text: "Colador Pequeño 20cm. - 345.000", value: 345000 },
+    { text: "Colador Grande 26cm. - 440.000", value: 440000 },
+    { text: "Plancha Doble RP - 570.000", value: 570000 },
+    { text: "Parrilla Redonda RP - 480.000", value: 480000 },
+    { text: "Plancha Sencilla RP - 440.000", value: 440000 },
+    { text: "Destapador Precision Series - 52.000", value: 52000 },
+    { text: "Rallador Precision Series - 55.000", value: 55000 },
+    { text: "Batidor de Globo Precisión Series - 66.000", value: 66000 },
+    { text: "Cortapizza Precisión Series - 61.000", value: 61000 },
+    { text: "Pelador - 51.000", value: 51000 },
+    { text: "Base Magnética - 55.000", value: 55000 },
+    { text: "Espátula Precisión Series - 60.000", value: 60000 },
+    { text: "Nvo Juego p/servir DELUXE - 46.000", value: 46000 },
+    { text: "Nvo Juego p/servir COMPLEMENTARIO - 42.000", value: 42000 },
+    { text: "JUEGO Cubiertos American 24 Pza - 165.000", value: 165000 },
+    { text: "Chocolatera RP - 450.000", value: 450000 },
+    { text: "Expertea - 695.000", value: 695000 },
+    { text: "Hervidor 900 ml. - 175.000", value: 175000 },
+    { text: "Hervidor 450 ml. - 147.000", value: 147000 },
+    { text: "Tazones 4 - 260.000", value: 260000 },
+    { text: "Tazones 2 - 128.000", value: 128000 },
+    { text: "Coladores Maxtractor - 389.000", value: 389000 },
+    { text: "Cafetera Expresso 10 tazas - 340.000", value: 340000 },
+    { text: "Cafetera Expresso 4 tazas - 210.000", value: 210000 },
+    { text: "Cartucho (Financiado) - 500.000", value: 500000 },
+    { text: "Cartucho (De contado) - 300.000", value: 300000 },
+    { text: "Cacerola para huevos - 590.000", value: 590000 },
+    { text: "RP ALL-IN-ONE BLOQUE COMPLETO - 1.430.000", value: 1430000 },
+    { text: "Juego de cuchillo para carne 4pza. - 235.000", value: 235000 },
+    { text: "Juego de cuchillos 5 piezas - 530.000", value: 530000 },
+    { text: "RP Tenedor para trinchar 6 Pulgadas - 195.000", value: 195000 },
+    { text: "RP Cuchillo para trinchar - 190.000", value: 190000 },
+    { text: "Afilador (Chaira) - 82.000", value: 82000 },
+    { text: "Tijeras Precisión - 180.000", value: 180000 },
+    { text: "Cuchillo Santoku 5 Pulgadas - 45.000", value: 45000 },
+    { text: "RP Hacha - 190.000", value: 190000 },
+    { text: "RP Cuchillo multiuso 5 Pulgadas - 180.000", value: 180000 },
+    { text: "RP Cuchillo para pelar 2.75 Pulgadas - 160.000", value: 160000 },
+    { text: "Tabla de bambú grande - 100.000", value: 100000 },
+    { text: "Tabla de bambú pequeña - 79.000", value: 79000 },
+          {}
+            // Más opciones aquí
+        ];
+
+        function addSearch() {
+            const container = document.getElementById('container');
+            const newInputContainer = document.createElement('div');
+            newInputContainer.className = 'input-container';
+
+            const newId = container.children.length + 1;
+            newInputContainer.innerHTML = `
+                <label for="search${newId}">Busca una opción:</label>
+                <input type="text" id="search${newId}" name="search" list="options-list${newId}" oninput="updateTotal()">
+                <datalist id="options-list${newId}">
+                    <!-- Opciones aquí -->
+                    ${options.map(option => `<option value="${option.text}" data-value="${option.value}"></option>`).join('')}
+                </datalist>
+                <button onclick="addSearch()">+</button>
+            `;
+
+            container.appendChild(newInputContainer);
+        }
+
+        function updateTotal() {
+            let total = 0;
+            const inputs = document.querySelectorAll('input[list]');
+            inputs.forEach(input => {
+                const selectedOption = [...input.list.options].find(option => option.value === input.value);
+                if (selectedOption) {
+                    total += parseInt(selectedOption.getAttribute('data-value'), 10);
+                }
+            });
+            document.getElementById('totalValue').value = total;
+        }
+    </script>
+</body>
+
+
+    <label for="precioVenta">Precio de Venta:</label>
+    <input type="number" id="precioVenta" placeholder="Ingrese el precio de venta">
+    
+    <label for="anticipo">Anticipo:</label>
+    <input type="number" id="anticipo" placeholder="Ingrese el anticipo">
+    
+    <button onclick="calcular()">Calcular</button>
+    
+    <div id="resultados" class="result"></div>
+    
+    <script>
+        function calcular() {
+            const precioVenta = parseFloat(document.getElementById('precioVenta').value);
+            const anticipo = parseFloat(document.getElementById('anticipo').value);
+            
+            if (isNaN(precioVenta) || isNaN(anticipo)) {
+                alert("Por favor, ingrese valores válidos en las casillas.");
+                return;
+            }
+            
+            const saldoAFinanciar = precioVenta - anticipo;
+            const coeficientes = {
+                "3 cuotas": 39.07,
+                "6 cuotas": 21.88,
+                "9 cuotas": 16.26,
+                "12 cuotas": 13.53,
+                "14 cuotas": 12.40,
+                "18 cuotas": 10.90
+            };
+            
+            let resultadosHTML = `<div><strong>Saldo a Financiar:</strong> ${saldoAFinanciar.toFixed(2)}</div>`;
+            
+            for (let cuotas in coeficientes) {
+                const resultado = saldoAFinanciar * (coeficientes[cuotas] / 100);
+                resultadosHTML += `<div><strong>${cuotas}:</strong> ${resultado.toFixed(2)}</div>`;
+            }
+            
+            document.getElementById('resultados').innerHTML = resultadosHTML;
+        }
+    </script>
+
+</body>
+
+
+<body>
+    <p style="font-size: small;">Programado por Dylan Ruiz.
+Inefable
+Thais MB
+Royal Prestige, Necochea.</p>
+</body>
+</html>
