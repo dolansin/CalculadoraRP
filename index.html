@@ -297,11 +297,119 @@ data-value="1250000></option>
 
 </body>
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo Inverso</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+
+        .product {
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+
+        .product h2 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .product p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Cálculo Inverso</h1>
+    <label for="amount">Ingresa el monto máximo:</label>
+    <input type="number" id="amount" placeholder="Escribe un número">
+    <button onclick="calculate()">Calcular</button>
+
+    <div class="result" id="result"></div>
+
+    <script>
+        const productos = [
+            {nombre: "Olla 12 Litros", cuotas: [{cuotas: 14, monto: 99882}, {cuotas: 18, monto: 87800}]},
+            {nombre: "Paellera 14\"", anticipo: 83000, cuotas: [{cuotas: 12, monto: 101069}, {cuotas: 14, monto: 92628}, {cuotas: 18, monto: 81423}]},
+            {nombre: "Olla 8 Litros", anticipo: 76500, cuotas: [{cuotas: 12, monto: 93194}, {cuotas: 14, monto: 85374}, {cuotas: 18, monto: 75047}]},
+            {nombre: "Olla 6 Litros", anticipo: 73000, cuotas: [{cuotas: 12, monto: 88892}, {cuotas: 14, monto: 81468}, {cuotas: 18, monto: 71613}]},
+            {nombre: "Sartén 26cm", anticipo: 69000, cuotas: [{cuotas: 9, monto: 100975}, {cuotas: 12, monto: 84021}, {cuotas: 14, monto: 77004}, {cuotas: 18, monto: 67689}]},
+            {nombre: "Olla 4 Litros", anticipo: 58000, cuotas: [{cuotas: 9, monto: 84877}, {cuotas: 12, monto: 70627}, {cuotas: 14, monto: 64728}, {cuotas: 18, monto: 56898}]},
+            {nombre: "Paellera 10\"", anticipo: 56000, cuotas: [{cuotas: 9, monto: 81950}, {cuotas: 12, monto: 68191}, {cuotas: 14, monto: 62496}, {cuotas: 18, monto: 54936}]},
+            {nombre: "Olla 3 Litros", anticipo: 52000, cuotas: [{cuotas: 9, monto: 76097}, {cuotas: 12, monto: 63320}, {cuotas: 14, monto: 58032}, {cuotas: 18, monto: 51012}]},
+            {nombre: "Sartén 20cm", anticipo: 51500, cuotas: [{cuotas: 6, monto: 101414}, {cuotas: 9, monto: 75365}, {cuotas: 12, monto: 62712}, {cuotas: 14, monto: 57474}, {cuotas: 18, monto: 50522}]},
+            {nombre: "Olla 2 Litros", anticipo: 47800, cuotas: [{cuotas: 6, monto: 94128}, {cuotas: 9, monto: 69951}, {cuotas: 12, monto: 58206}, {cuotas: 14, monto: 53345}, {cuotas: 18, monto: 46892}]},
+            {nombre: "Olla 1.5 Qts.", anticipo: 43500, cuotas: [{cuotas: 6, monto: 85660}, {cuotas: 9, monto: 63658}, {cuotas: 12, monto: 52970}, {cuotas: 14, monto: 48546}, {cuotas: 18, monto: 42674}]}
+        ];
+
+        function calculate() {
+            const amount = parseFloat(document.getElementById("amount").value);
+            const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = ''; // Limpiar resultados anteriores
+
+            if (isNaN(amount)) {
+                resultDiv.innerHTML = '<p>Por favor, ingresa un número válido.</p>';
+                return;
+            }
+
+            productos.forEach(producto => {
+                let mostrarProducto = false;
+                let productoHTML = `<div class="product"><h2>${producto.nombre}</h2>`;
+                
+                if (producto.anticipo) {
+                    productoHTML += `<p>Anticipo: $${producto.anticipo}</p>`;
+                }
+
+                producto.cuotas.forEach(opcion => {
+                    if (opcion.monto <= amount) {
+                        productoHTML += `<p>${opcion.cuotas} cuotas: $${opcion.monto}</p>`;
+                        mostrarProducto = true;
+                    }
+                });
+
+                productoHTML += `</div>`;
+
+                if (mostrarProducto) {
+                    resultDiv.innerHTML += productoHTML;
+                }
+            });
+
+            if (resultDiv.innerHTML === '') {
+                resultDiv.innerHTML = '<p>No hay productos que cumplan con ese monto.</p>';
+            }
+        }
+    </script>
+
+</body>
+</html>
+            
 
 <body>
     <p style="font-size: small;">Programado por Dylan Ruiz.
-Inefable
-Thais MB
+Inefable.
+Thais MB.
 Royal Prestige, Necochea.</p>
 </body>
 </html>
