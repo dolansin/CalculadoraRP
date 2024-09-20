@@ -24,18 +24,18 @@
         }
         .logo {
             display: block;
-            margin: 0 auto 20px;
-            width: 120px;
+            margin: 0 auto 10px;
+            width: 250px;
             height: 128px;
         }
     </style>
 </head>
 <body>
 
-    <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/97/50/66/9750662d-aaaf-37b5-4626-907b8bcb752c/source/256x256bb.jpg" alt="Logo Royal" class="logo">
+    <img src="https://cdn.cookielaw.org/logos/2e55534b-fd33-4478-bd73-63a6265946ba/b30c4dec-c942-44f8-9d06-526673715f29/96bf3ca5-82c6-4a6e-a5b4-8ce7cf63038b/RP_Primary_Logo_Black.png" alt="Logo Royal" class="logo">
     
     <h2>Calculadora Royal</h2>
-           <button onclick="resetearPagina()">Borrar todo</button>
+           <button onclick="resetearPagina()">⟳ Borrar todo</button>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,7 +45,7 @@
             margin-bottom: 10px;
         }
         #total {
-            margin-top: 20px;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -56,7 +56,7 @@
             <input type="text" id="search1" name="search" list="options-list1" oninput="updateTotal()">
               <button class="borrar" onclick="limpiarCampo('search1')">X</button>
             <datalist id="options-list1">
-                <!-- Opciones aquí -->
+                <!-- opciones -->
                 <option value="15 pcs. - 4.180.000" data-value="4180000"></option>
                 <option value="10 pcs. - 3.080.000" data-value="3080000"></option>
                 <option value="8 pcs. - 2.460.000" data-value="2460000"></option>
@@ -131,7 +131,7 @@ data-value="1250000"></option>
 <option value="RP Cuchillo para pelar 2.75 Pulgadas - 160.000" data-value="160000"></option>
 <option value="Tabla de bambú grande - 100.000" data-value="100000"></option>
 <option value="Tabla de bambú pequeña - 79.000" data-value="79000"></option>
-                <!-- Más opciones aquí -->
+                <!-- mas opciones aca -->
             </datalist>
             <button onclick="addSearch()">+</button>
         </div>
@@ -218,14 +218,15 @@ data-value="1250000"></option>
     { text: "Tabla de bambú grande - 100.000", value: 100000 },
     { text: "Tabla de bambú pequeña - 79.000", value: 79000 },
           {}
-            // Más opciones aquí
+            // mas opciones aca
         ];
         // Función para transferir el valor de 'valor1' a 'valor2'
         function transferirValor() {
             // Obtener el valor del primer campo
             const valor1 = document.getElementById('totalValue').value;
-            
-            // Pasar el valor del campo 'valor1' al campo 'valor2'
+
+          
+            // Pasar el valor del campo 'valor1' a 'valor2'
             document.getElementById('precioVenta').value = valor1;
         }
   
@@ -275,15 +276,9 @@ data-value="1250000"></option>
     <button onclick="calcular()">Calcular</button>
     
     <div id="resultados" class="result"></div>
-
-      <!-- Casilla para la tasa de conversión -->
-    <input type="number" id="tasaDolar" placeholder="Cambio del día">
-
-    <!-- Botón para convertir a dólares -->
-    <button onclick="convertirADolares()">Dolarizar</button>
     
     <script>
-        // Función para calcular cuotas y saldo a financiar
+        // Función para calcular saldo a financiar y cuotas
         function calcular() {
             const precioVenta = parseFloat(document.getElementById('precioVenta').value);
             const anticipo = parseFloat(document.getElementById('anticipo').value);
@@ -313,7 +308,7 @@ data-value="1250000"></option>
             document.getElementById('resultados').innerHTML = resultadosHTML;
         }
 
-        // Función para convertir los resultados a dólares
+        // Función para convertir los resultados a dólares *** esta funcion la elimine
         function convertirADolares() {
             const tasaDolar = parseFloat(document.getElementById('tasaDolar').value);
 
@@ -336,8 +331,6 @@ data-value="1250000"></option>
 
 </body>
 
-<!DOCTYPE html>
-<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -346,44 +339,33 @@ data-value="1250000"></option>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            max-width: 400px;
         }
-
-        h1 {
-            color: #333;
-        }
-
-        input, button {
-            padding: 10px;
-            font-size: 16px;
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
             margin: 10px 0;
+            box-sizing: border-box;
         }
-
         .result {
             margin-top: 20px;
         }
-
-        .product {
-            margin-bottom: 15px;
-            padding: 10px;
-            background-color: #f0f0f0;
-            border-radius: 5px;
-        }
-
-        .product h2 {
-            margin: 0;
-            font-size: 18px;
-        }
-
-        .product p {
+        .result div {
             margin: 5px 0;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto 10px;
+            width: 250px;
+            height: 128px;
         }
     </style>
 </head>
 <body>
 
     <h1>Cálculo Inverso</h1>
-    <label for="amount">Ingresa el monto máximo:</label>
-    <input type="number" id="amount" placeholder="Escribe un número">
+    <label for="amount">Búsqueda de cuota adecuada a un presupuesto:</label>
+    <input type="number" id="amount" placeholder="Cuota de hasta">
     <button onclick="calculate()">Calcular</button>
 
     <div class="result" id="result"></div>
@@ -448,6 +430,7 @@ data-value="1250000"></option>
           // Función para limpiar un campo específico
         function limpiarCampo(campoId) {
             document.getElementById(campoId).value = '';
+              document.getElementById('totalValue').value = total.toFixed(2);
         }
 
   
