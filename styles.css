@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    max-width: 400px;
+    background-color: #ffffff; /* Fondo blanco */
+    color: #333; /* Color de texto */
+}
+
+h1, h2 {
+    color: #007bff; /* Azul eléctrico */
+    text-align: center;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 10px;
+    width: 250px;
+    height: auto; /* Ajustar a la altura automática */
+}
+
+input[type="number"], 
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #007bff; /* Borde azul eléctrico */
+    border-radius: 4px; /* Esquinas redondeadas */
+}
+
+input[type="number"]:focus, 
+input[type="text"]:focus {
+    border-color: #0056b3; /* Color del borde al enfocar */
+    outline: none; /* Sin contorno al enfocar */
+}
+
+button {
+    background-color: #000; /* Botones negros */
+    color: white; /* Texto blanco */
+    padding: 10px;
+    border: none;
+    border-radius: 4px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    margin: 5px 0; /* Espaciado vertical */
+    width: 25%; /* Botones a ancho completo */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+button:hover {
+    background-color: #444; /* Color oscuro al pasar el mouse */
+}
+
+.result {
+    margin-top: 20px;
+    background-color: #f8f9fa; /* Fondo claro para resultados */
+    padding: 10px;
+    border: 1px solid #007bff; /* Borde azul eléctrico */
+    border-radius: 4px; /* Esquinas redondeadas */
+}
+
+.result div {
+    margin: 5px 0;
+}
+
+.input-container {
+    margin-bottom: 10px;
+}
+
+.borrar {
+    background-color: #dc3545; /* Rojo para el botón de borrar */
+}
+
+.borrar:hover {
+    background-color: #c82333; /* Color más oscuro al pasar el mouse */
+}
+
+.boton-porcentaje {
+    background-color: #007bff; /* Botón azul eléctrico para porcentajes */
+    width: auto; /* Ancho automático */
+}
+
+.boton-porcentaje:hover {
+    background-color: #0056b3; /* Color oscuro al pasar el mouse */
+}
